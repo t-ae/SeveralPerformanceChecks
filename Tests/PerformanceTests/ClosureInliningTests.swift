@@ -23,6 +23,20 @@ class ClosureInliningTests: XCTestCase {
         }
     }
     
+    func testInlineNoClosure() {
+        let x = (0..<1_000_000).map { Int($0) }
+        
+        measure {
+            for _ in 0..<100 {
+                var new = [Int](repeating: 0, count: x.count)
+                for i in 0..<x.count {
+                    new[i] = x[i] + 1
+                }
+
+            }
+        }
+    }
+    
     func testInlineCompound() {
         var x = (0..<1_000_000).map { Int($0) }
         
@@ -39,6 +53,19 @@ class ClosureInliningTests: XCTestCase {
         measure {
             for _ in 0..<100 {
                 x.noInlineMapCompound(+=, rhs: 1)
+            }
+        }
+    }
+    
+    func testInlineCompoundNoClosure() {
+        var x = (0..<1_000_000).map { Int($0) }
+        
+        measure {
+            for _ in 0..<100 {
+                for i in 0..<x.count {
+                    x[i] += 1
+                }
+                
             }
         }
     }
