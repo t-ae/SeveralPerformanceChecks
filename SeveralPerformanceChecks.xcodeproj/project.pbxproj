@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7B7A93A1F4EB3490003BC13 /* AcceleratePerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B7A9391F4EB3490003BC13 /* AcceleratePerformanceTests.swift */; };
+		A7B7A93A1F4EB3490003BC13 /* AccelerateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B7A9391F4EB3490003BC13 /* AccelerateTests.swift */; };
+		A7B7A9431F4EBDAE0003BC13 /* CopyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B7A9421F4EBDAE0003BC13 /* CopyTests.swift */; };
 		OBJ_18 /* ClosureCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ClosureCallTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A7B7A9391F4EB3490003BC13 /* AcceleratePerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceleratePerformanceTests.swift; sourceTree = "<group>"; };
+		A7B7A9391F4EB3490003BC13 /* AccelerateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerateTests.swift; sourceTree = "<group>"; };
+		A7B7A9421F4EBDAE0003BC13 /* CopyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* ClosureCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureCallTests.swift; sourceTree = "<group>"; };
 		OBJ_12 /* PerformanceTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -37,14 +39,13 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_8 /* Tests */,
 				OBJ_11 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_8 /* Tests */ = {
@@ -58,8 +59,9 @@
 		OBJ_9 /* PerformanceTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7B7A9391F4EB3490003BC13 /* AcceleratePerformanceTests.swift */,
+				A7B7A9391F4EB3490003BC13 /* AccelerateTests.swift */,
 				OBJ_10 /* ClosureCallTests.swift */,
+				A7B7A9421F4EBDAE0003BC13 /* CopyTests.swift */,
 			);
 			name = PerformanceTests;
 			path = Tests/PerformanceTests;
@@ -99,7 +101,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_11 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -114,8 +116,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				A7B7A93A1F4EB3490003BC13 /* AcceleratePerformanceTests.swift in Sources */,
+				A7B7A93A1F4EB3490003BC13 /* AccelerateTests.swift in Sources */,
 				OBJ_18 /* ClosureCallTests.swift in Sources */,
+				A7B7A9431F4EBDAE0003BC13 /* CopyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

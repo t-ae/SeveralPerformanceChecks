@@ -1,8 +1,69 @@
 
 import XCTest
-import Accelerate
+#if os(macOS)
+    import Accelerate
+#endif
 
 class AcceleratePerformanceTests: XCTestCase {
+    #if os(macOS)
+    // MARK: - Stride Copy
+    func testCopy() {
+        let stride = 2
+        let c = 1_000_000
+        let a = [Float](repeating: 1, count: c)
+        var b = [Float](repeating: 0, count: c/stride)
+        
+        measure {
+            for _ in 0..<100 {
+                for i in 0..<c/stride {
+                    b[i] = a[stride*i]
+                }
+            }
+        }
+    }
+    
+    func testCopy_Pointer() {
+        let stride = 2
+        let c = 1_000_000
+        let a = [Float](repeating: 1, count: c)
+        var b = [Float](repeating: 0, count: c/stride)
+        
+        measure {
+            for _ in 0..<100 {
+                var pa = UnsafePointer(a)
+                var pb = UnsafeMutablePointer(mutating: &b)
+                for _ in 0..<c/stride {
+                    pb.pointee = pa.pointee
+                    pa += stride
+                    pb += 1
+                }
+            }
+        }
+    }
+    
+    func testCopy_BLAS() {
+        let stride = 2
+        let c = 1_000_000
+        let a = [Float](repeating: 1, count: c)
+        var b = [Float](repeating: 0, count: c/stride)
+        measure {
+            for _ in 0..<100 {
+                cblas_scopy(Int32(c/stride), a, Int32(stride), &b, 1)
+            }
+        }
+    }
+    
+    func testCopy_vDSP() {
+        let stride = 2
+        let c = 1_000_000
+        let a = [Float](repeating: 1, count: c)
+        var b = [Float](repeating: 0, count: c/stride)
+        measure {
+            for _ in 0..<100 {
+                vDSP_mmov(a, &b, vDSP_Length(c/stride), 1, vDSP_Length(stride), 1)
+            }
+        }
+    }
     
     // MARK: - Negate
     func testNegate_BLAS() {
@@ -165,57 +226,6 @@ class AcceleratePerformanceTests: XCTestCase {
             for _ in 0..<100 {
                 vDSP_mmul(a, 1, b, 1, &c, 1, M, N, K)
             }
-        }
-    }
-    
-    // MARK: - Copy
-    func testCopy() {
-        let stride = 2
-        let c = 100_000_000
-        let a = [Float](repeating: 1, count: c)
-        var b = [Float](repeating: 0, count: c/stride)
-        
-        measure {
-            for i in 0..<c/stride {
-                b[i] = a[stride*i]
-            }
-        }
-    }
-    
-    func testCopy_Pointer() {
-        let stride = 2
-        let c = 100_000_000
-        let a = [Float](repeating: 1, count: c)
-        var b = [Float](repeating: 0, count: c/stride)
-        
-        measure {
-            var pa = UnsafePointer(a)
-            var pb = UnsafeMutablePointer(mutating: &b)
-            for _ in 0..<c/stride {
-                pb.pointee = pa.pointee
-                pa += stride
-                pb += 1
-            }
-        }
-    }
-    
-    func testCopy_BLAS() {
-        let stride = 2
-        let c = 100_000_000
-        let a = [Float](repeating: 1, count: c)
-        var b = [Float](repeating: 0, count: c/stride)
-        measure {
-            cblas_scopy(Int32(c/stride), a, Int32(stride), &b, 1)
-        }
-    }
-    
-    func testCopy_vDSP() {
-        let stride = 2
-        let c = 100_000_000
-        let a = [Float](repeating: 1, count: c)
-        var b = [Float](repeating: 0, count: c/stride)
-        measure {
-            vDSP_mmov(a, &b, vDSP_Length(c/stride), 1, vDSP_Length(stride), 1)
         }
     }
     
@@ -402,4 +412,5 @@ class AcceleratePerformanceTests: XCTestCase {
             }
         }
     }
+    #endif
 }
