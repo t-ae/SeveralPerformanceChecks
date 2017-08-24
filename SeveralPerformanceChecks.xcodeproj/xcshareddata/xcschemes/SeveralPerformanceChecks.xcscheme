@@ -16,7 +16,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_13"
+               BlueprintIdentifier = "OBJ_17"
                BuildableName = "PerformanceTests.xctest"
                BlueprintName = "PerformanceTests"
                ReferencedContainer = "container:SeveralPerformanceChecks.xcodeproj">
