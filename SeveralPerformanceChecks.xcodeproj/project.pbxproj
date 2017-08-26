@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70DE7801F51A557008C7835 /* BufferPointerIterateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */; };
 		A754A75E1F5017C1001C83D0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754A75D1F5017C1001C83D0 /* main.swift */; };
 		OBJ_26 /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* MyArray.swift */; };
 		OBJ_27 /* SeveralPerformanceChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SeveralPerformanceChecks.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferPointerIterateTests.swift; sourceTree = "<group>"; };
 		A754A75B1F5017C1001C83D0 /* Profiling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Profiling; sourceTree = BUILT_PRODUCTS_DIR; };
 		A754A75D1F5017C1001C83D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_12 /* AccelerateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerateTests.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				OBJ_15 /* CopyTests.swift */,
 				OBJ_16 /* ManagedBufferArrayTests.swift */,
 				OBJ_17 /* MapTests.swift */,
+				A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */,
 			);
 			name = SeveralPerformanceChecksTests;
 			path = Tests/SeveralPerformanceChecksTests;
@@ -130,7 +133,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -139,7 +142,6 @@
 				A754A75C1F5017C1001C83D0 /* Profiling */,
 				OBJ_18 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -228,7 +230,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				A70DE7801F51A557008C7835 /* BufferPointerIterateTests.swift in Sources */,
 				OBJ_34 /* AccelerateTests.swift in Sources */,
 				OBJ_35 /* ClosureCallTests.swift in Sources */,
 				OBJ_36 /* ClosureInliningTests.swift in Sources */,
@@ -503,6 +506,7 @@
 				A754A7611F5017C1001C83D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		OBJ_2 /* Build configuration list for PBXProject "SeveralPerformanceChecks" */ = {
 			isa = XCConfigurationList;

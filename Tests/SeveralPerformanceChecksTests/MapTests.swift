@@ -43,6 +43,19 @@ class MapTests: XCTestCase {
         }
     }
     
+    func testNoMap_noclosure_noreserve() {
+        let x = (0..<1_000_000).map { Int($0) }
+        
+        measure {
+            for _ in 0..<100 {
+                var new = [Int]()
+                for i in 0..<x.count {
+                    new.append(x[i] + 1)
+                }
+            }
+        }
+    }
+    
     func testNoMap_zerofill() {
         let x = (0..<1_000_000).map { Int($0) }
         let f: (Int)->Int = { $0 + 1 }
