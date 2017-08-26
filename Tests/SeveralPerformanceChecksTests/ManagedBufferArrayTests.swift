@@ -26,6 +26,17 @@ class ManagedBufferArrayTests: XCTestCase {
         }
     }
     
+    func testIterateMyFloatArray() {
+        let count = 1_000_000
+        let a = MyFloatArray(repeating: 0, count: count)
+        
+        measure {
+            for _ in 0..<100 {
+                _ = a.filter { $0 < 0 }
+            }
+        }
+    }
+    
     func testIterateMyArray2() {
         let count = 1_000_000
         let a = MyArray2<Float>(repeating: 0, count: count)
