@@ -83,6 +83,29 @@ class MapTests: XCTestCase {
         }
     }
     
+    func testNoMap_zerofill_pointer() {
+        let x = (0..<1_000_000).map { Int($0) }
+        let f: (Int)->Int = { $0 + 1 }
+        
+        measure {
+            for _ in 0..<100 {
+                var new = [Int](repeating: 0, count: x.count)
+                x.withUnsafeBufferPointer {
+                    var src = $0.baseAddress!
+                    new.withUnsafeMutableBufferPointer {
+                        var dst = $0.baseAddress!
+                        for _ in 0..<$0.count {
+                            dst.pointee = f(src.pointee)
+                            src += 1
+                            dst += 1
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
     func testNoMap_zerofill_noclosure_pointer() {
         let x = (0..<1_000_000).map { Int($0) }
         

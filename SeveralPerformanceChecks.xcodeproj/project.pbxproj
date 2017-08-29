@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A70DE7801F51A557008C7835 /* BufferPointerIterateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */; };
+		A70DE7841F51CB02008C7835 /* ArraySliceIterationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE7831F51CB02008C7835 /* ArraySliceIterationTests.swift */; };
+		A70DE7861F526BA6008C7835 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE7851F526BA6008C7835 /* Sequence.swift */; };
+		A70DE7881F526C4C008C7835 /* SequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE7871F526C4C008C7835 /* SequenceTests.swift */; };
 		A754A75E1F5017C1001C83D0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754A75D1F5017C1001C83D0 /* main.swift */; };
 		OBJ_26 /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* MyArray.swift */; };
 		OBJ_27 /* SeveralPerformanceChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SeveralPerformanceChecks.swift */; };
@@ -51,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferPointerIterateTests.swift; sourceTree = "<group>"; };
+		A70DE7831F51CB02008C7835 /* ArraySliceIterationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySliceIterationTests.swift; sourceTree = "<group>"; };
+		A70DE7851F526BA6008C7835 /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		A70DE7871F526C4C008C7835 /* SequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTests.swift; sourceTree = "<group>"; };
 		A754A75B1F5017C1001C83D0 /* Profiling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Profiling; sourceTree = BUILT_PRODUCTS_DIR; };
 		A754A75D1F5017C1001C83D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_12 /* AccelerateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerateTests.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 				OBJ_16 /* ManagedBufferArrayTests.swift */,
 				OBJ_17 /* MapTests.swift */,
 				A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */,
+				A70DE7831F51CB02008C7835 /* ArraySliceIterationTests.swift */,
+				A70DE7871F526C4C008C7835 /* SequenceTests.swift */,
 			);
 			name = SeveralPerformanceChecksTests;
 			path = Tests/SeveralPerformanceChecksTests;
@@ -149,6 +157,7 @@
 			children = (
 				OBJ_8 /* MyArray.swift */,
 				OBJ_9 /* SeveralPerformanceChecks.swift */,
+				A70DE7851F526BA6008C7835 /* Sequence.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -257,6 +266,7 @@
 			files = (
 				OBJ_26 /* MyArray.swift in Sources */,
 				OBJ_27 /* SeveralPerformanceChecks.swift in Sources */,
+				A70DE7861F526BA6008C7835 /* Sequence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +276,10 @@
 			files = (
 				A70DE7801F51A557008C7835 /* BufferPointerIterateTests.swift in Sources */,
 				OBJ_34 /* AccelerateTests.swift in Sources */,
+				A70DE7841F51CB02008C7835 /* ArraySliceIterationTests.swift in Sources */,
 				OBJ_35 /* ClosureCallTests.swift in Sources */,
 				OBJ_36 /* ClosureInliningTests.swift in Sources */,
+				A70DE7881F526C4C008C7835 /* SequenceTests.swift in Sources */,
 				OBJ_37 /* CopyTests.swift in Sources */,
 				OBJ_38 /* ManagedBufferArrayTests.swift in Sources */,
 				OBJ_39 /* MapTests.swift in Sources */,
