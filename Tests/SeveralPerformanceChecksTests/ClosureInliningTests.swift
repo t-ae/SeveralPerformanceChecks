@@ -3,6 +3,16 @@ import XCTest
 
 class ClosureInliningTests: XCTestCase {
     
+    func testNormalMap() {
+        let x = (0..<1_000_000).map { Int($0) }
+        
+        measure {
+            for _ in 0..<100 {
+                _ = x.map { $0 + 1 }
+            }
+        }
+    }
+    
     func testInline() {
         let x = (0..<1_000_000).map { Int($0) }
         
@@ -74,7 +84,7 @@ class ClosureInliningTests: XCTestCase {
 extension Array where Element == Int {
     @inline(__always)
     fileprivate func inlineMap(f: (Int)->Int) -> [Int] {
-        var new = [Int](repeating: 0, count: count)
+        var new = self
         for i in 0..<count {
             new[i] = f(new[i])
         }
@@ -83,7 +93,7 @@ extension Array where Element == Int {
     
     @inline(never)
     fileprivate func noInlineMap(f: (Int)->Int) -> [Int] {
-        var new = [Int](repeating: 0, count: count)
+        var new = self
         for i in 0..<count {
             new[i] = f(new[i])
         }
