@@ -11,6 +11,7 @@
 		A70DE7841F51CB02008C7835 /* ArraySliceIterationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE7831F51CB02008C7835 /* ArraySliceIterationTests.swift */; };
 		A70DE7861F526BA6008C7835 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE7851F526BA6008C7835 /* Sequence.swift */; };
 		A70DE7881F526C4C008C7835 /* SequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE7871F526C4C008C7835 /* SequenceTests.swift */; };
+		A72CEC571F5937F000D1F12C /* FlattenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CEC561F5937F000D1F12C /* FlattenTests.swift */; };
 		A754A75E1F5017C1001C83D0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754A75D1F5017C1001C83D0 /* main.swift */; };
 		OBJ_26 /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* MyArray.swift */; };
 		OBJ_27 /* SeveralPerformanceChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SeveralPerformanceChecks.swift */; };
@@ -57,6 +58,7 @@
 		A70DE7831F51CB02008C7835 /* ArraySliceIterationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySliceIterationTests.swift; sourceTree = "<group>"; };
 		A70DE7851F526BA6008C7835 /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		A70DE7871F526C4C008C7835 /* SequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTests.swift; sourceTree = "<group>"; };
+		A72CEC561F5937F000D1F12C /* FlattenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlattenTests.swift; sourceTree = "<group>"; };
 		A754A75B1F5017C1001C83D0 /* Profiling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Profiling; sourceTree = BUILT_PRODUCTS_DIR; };
 		A754A75D1F5017C1001C83D0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_12 /* AccelerateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerateTests.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				A70DE77F1F51A557008C7835 /* BufferPointerIterateTests.swift */,
 				A70DE7831F51CB02008C7835 /* ArraySliceIterationTests.swift */,
 				A70DE7871F526C4C008C7835 /* SequenceTests.swift */,
+				A72CEC561F5937F000D1F12C /* FlattenTests.swift */,
 			);
 			name = SeveralPerformanceChecksTests;
 			path = Tests/SeveralPerformanceChecksTests;
@@ -282,6 +285,7 @@
 				A70DE7881F526C4C008C7835 /* SequenceTests.swift in Sources */,
 				OBJ_37 /* CopyTests.swift in Sources */,
 				OBJ_38 /* ManagedBufferArrayTests.swift in Sources */,
+				A72CEC571F5937F000D1F12C /* FlattenTests.swift in Sources */,
 				OBJ_39 /* MapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
